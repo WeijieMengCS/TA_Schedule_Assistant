@@ -33,7 +33,6 @@ public class GUIengine {
 
 	private JFrame frame;
 	private  File inputFile;
-	private String fileName;
 	private JTextField titleTextField;
 	private JTextField fileTextField;
 	private int numberOfTAsInEachSection = -3;
@@ -100,8 +99,10 @@ public class GUIengine {
 			public void mouseClicked(MouseEvent e) {
 				if(inputFile!=null) {
 					FileParser fp = new FileParser(inputFile);
+                    // begin parsing the input file and generate a parsed file called tempFile.csv
 					fp.csvReader();
 					Application app = new Application();
+                    app.setSourceFileName(inputFile.getName());
 					app.run("tempFile.csv",fp);
 				}
 			}
@@ -149,8 +150,7 @@ public class GUIengine {
                 if (chooser.getSelectedFile()!=null){
 
                     inputFile = chooser.getSelectedFile();
-					fileName = inputFile.getName();
-                    fileTextField.setText(fileName);
+                    fileTextField.setText(inputFile.getName());
 
                 }
 				

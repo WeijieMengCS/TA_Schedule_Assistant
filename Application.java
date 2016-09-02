@@ -7,6 +7,22 @@ import java.util.ArrayList;
 
 public class Application {
 
+    private String sourceFileName;
+
+    /**
+     * Set name of the source file
+     * @param fileName
+     */
+    public void setSourceFileName(String fileName){
+        this.sourceFileName = fileName;
+    }
+
+
+    private String getFileNamePrefix(){
+        int index = sourceFileName.indexOf(".csv");
+        return sourceFileName.substring(0, index);
+    }
+
     /**
      * Get stats from parsed file and assigned tas to each Section
      * And finally write the assigned result to a file
@@ -36,8 +52,12 @@ public class Application {
         
         // Generate output
         ResultGenerator generator = new ResultGenerator(fileParser, operator);
-        File output = new File("finalResult.csv");
-        generator.outputGenerator(output);
+        String curr_dir = System.getProperty("user.dir");
 
+
+        String resultFileName = curr_dir + "/results/" + getFileNamePrefix() + "_Assigned_Result.txt";
+        System.out.println(resultFileName);
+        File output = new File(resultFileName);
+        generator.outputGenerator(output);
     }
 }

@@ -38,7 +38,7 @@ public class FileParser {
 	 * read CSV file from the source file and parse it to the tempFile.csv
 	 */
 	public void csvReader(){
-		
+
 	      BufferedReader br = null;
 	      BufferedWriter bw = null;
 	        String line = "";
