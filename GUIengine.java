@@ -1,41 +1,22 @@
-
+package TA_Schedule_Assistant;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-import java.awt.GridBagLayout;
-
 import javax.swing.JLabel;
 
-import java.awt.Insets;
-
 import javax.swing.JButton;
-
-import java.awt.BorderLayout;
 
 import javax.swing.JTextField;
 
 import java.awt.Font;
-
-import javax.swing.BoxLayout;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-
-import java.awt.FlowLayout;
 
 import javax.swing.SwingConstants;
 import javax.swing.JFileChooser;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JToggleButton;
-import javax.swing.JTextArea;
-import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
-
-import java.awt.Button;
 
 import javax.swing.JComboBox;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -112,16 +93,12 @@ public class GUIengine {
 			@Override
 			//TODO
 			public void mouseClicked(MouseEvent e) {
-				if(inputFile!=null){
+				if(inputFile!=null) {
 					FileParser fp = new FileParser(inputFile);
 					fp.csvReader();
-					
-				}else{
-					
-					
-					
+					Application app = new Application();
+					app.run();
 				}
-				
 			}
 		});
 		startButton.addActionListener(new ActionListener() {
