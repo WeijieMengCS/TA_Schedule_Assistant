@@ -1,9 +1,10 @@
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Application {
 
-    public void run(String filePath){
+    public void run(String filePath, FileParser fileParser){
      //   String filePath = "/Users/mengxueluo/Desktop/Fun/TA_Schedule/SampleData/fall16.csv";
         // Parse Data from the file
         CSVFileReader fileReader = new CSVFileReader();
@@ -22,5 +23,13 @@ public class Application {
         operator.setTAList(collector.getTAList());
         operator.setNumberOfParticipantsRequiredForEachSection(2);
         operator.beginAssignment();
+        
+        //generate ouput
+        ResultGenerator generator = new ResultGenerator(fileParser  ,operator);
+        File output = new File("finalResult.csv");
+        generator.outputGenerator(output);
+        
+        
+        
     }
 }

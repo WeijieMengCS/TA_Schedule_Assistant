@@ -101,7 +101,7 @@ public class GUIengine {
 					FileParser fp = new FileParser(inputFile);
 					fp.csvReader();
 					Application app = new Application();
-					app.run("tempFile.csv");
+					app.run("tempFile.csv",fp);
 				}
 			}
 		});
