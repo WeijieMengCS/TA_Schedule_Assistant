@@ -1,4 +1,4 @@
-package TA_Schedule_Assistant;
+
 
 import java.awt.EventQueue;
 
@@ -97,7 +97,7 @@ public class GUIengine {
 					FileParser fp = new FileParser(inputFile);
 					fp.csvReader();
 					Application app = new Application();
-					app.run();
+					app.run("tempFile.csv");
 				}
 			}
 		});

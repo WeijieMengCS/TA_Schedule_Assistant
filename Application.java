@@ -1,11 +1,10 @@
-package TA_Schedule_Assistant;
 
 import java.util.ArrayList;
 
 public class Application {
 
-    public void run(){
-        String filePath = "/Users/mengxueluo/Desktop/Fun/TA_Schedule/SampleData/fall16.csv";
+    public void run(String filePath){
+     //   String filePath = "/Users/mengxueluo/Desktop/Fun/TA_Schedule/SampleData/fall16.csv";
         // Parse Data from the file
         CSVFileReader fileReader = new CSVFileReader();
         ArrayList<ArrayList<String>> data = fileReader.readFile(filePath);
