@@ -25,6 +25,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 
+/**
+ * @author meng
+ *
+ */
 public class GUIengine {
 
 	private JFrame frame;
@@ -36,6 +40,7 @@ public class GUIengine {
 	/**
 	 * Launch the application.
 	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -53,9 +58,8 @@ public class GUIengine {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+	
+
 	public GUIengine() {
 		initialize();
 	}

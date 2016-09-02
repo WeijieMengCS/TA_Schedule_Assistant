@@ -15,6 +15,11 @@ public class FileParser {
 	private ArrayList<String> dayList;
 	private ArrayList<String> timeList;
 	private ArrayList<String> sectionList;
+	
+	
+	/**
+	 * @param sourceFile: file to be read
+	 */
 	public FileParser(File sourceFile) {
 		super();
 		this.sourceFile = sourceFile;
@@ -24,6 +29,14 @@ public class FileParser {
 	}
 	
 	
+	
+	
+
+	
+	
+	/**
+	 * read CSV file from the source file and parse it to the tempFile.csv
+	 */
 	public void csvReader(){
 		
 	      BufferedReader br = null;
@@ -100,6 +113,23 @@ public class FileParser {
 
 		
 		
+	}
+
+	  /*********************************************************************
+     *                              Getter
+     *********************************************************************/
+	public ArrayList<String> getDayList() {
+		return dayList;
+	}
+
+
+	public ArrayList<String> getTimeList() {
+		return timeList;
+	}
+
+
+	public ArrayList<String> getSectionList() {
+		return sectionList;
 	}
 	
  
