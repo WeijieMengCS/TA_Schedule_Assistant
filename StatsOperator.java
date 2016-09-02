@@ -1,5 +1,6 @@
-
-
+/*********************************************************************
+ *                           @author: Mx
+ *********************************************************************/
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +9,7 @@ import java.util.Comparator;
 public class StatsOperator {
     private ArrayList<LabSection> labSectionList;
     private ArrayList<TA> TAList;
-    private int numberOfParticipantsRequiredForEachSection; // GTA is one while UTA is usually at least two
+    private int numberOfParticipantsRequiredForEachSection; // For GTA it's one while UTA is usually at least two
 
     /*********************************************************************
      *                              Setter
@@ -240,6 +241,10 @@ public class StatsOperator {
             }
             System.out.println();
         }
+    }
+
+    public ArrayList<String> testCandidatesSorting(ArrayList<String> candidates, int sectionNumber){
+        return sortCandidates(candidates, sectionNumber);
     }
 
 }

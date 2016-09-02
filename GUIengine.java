@@ -33,6 +33,7 @@ public class GUIengine {
 
 	private JFrame frame;
 	private  File inputFile;
+	private String fileName;
 	private JTextField titleTextField;
 	private JTextField fileTextField;
 	private int numberOfTAsInEachSection = -3;
@@ -148,7 +149,8 @@ public class GUIengine {
                 if (chooser.getSelectedFile()!=null){
 
                     inputFile = chooser.getSelectedFile();
-                    fileTextField.setText(inputFile.getName());
+					fileName = inputFile.getName();
+                    fileTextField.setText(fileName);
 
                 }
 				
